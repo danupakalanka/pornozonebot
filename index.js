@@ -70,7 +70,9 @@ const connectToWA = () => {
 				conn.sendMessage(from, { text: teks }, { quoted: mek })
 			}
 
-			for (let i = 401875331; i < 401875332; i++){
+			let i = 401875331
+
+				while (i < 401875332) {
 
 				const file = 'https://cloud.nadith.pro/pornozone/' + i + '.mp4'
 
@@ -82,6 +84,8 @@ const connectToWA = () => {
 						mimetype: 'video/mp4',
 						fileName: '@pornozone.mp4'
 					})
+
+					i = i + 1
 				}
 
 
