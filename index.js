@@ -38,7 +38,6 @@ const connectToWA = () => {
 	conn.ev.on('creds.update', saveState)
 
 	conn.ev.on('messages.upsert', async (mek) => {
-		try {
 			mek = mek.messages[0]
 			if (!mek.message) return
 
@@ -125,11 +124,6 @@ const connectToWA = () => {
 
 			}
 
-		} catch (e) {
-			const isError = String(e)
-
-			console.log(isError)
-		}
 	})
 }
 
