@@ -37,6 +37,7 @@ const connectToWA = () => {
 
 	conn.ev.on('creds.update', saveState)
 
+	conn.ev.on('messages.upsert', async (mek) => {
 		try {
 			mek = mek.messages[0]
 			if (!mek.message) return
@@ -69,23 +70,7 @@ const connectToWA = () => {
 				conn.sendMessage(from, { text: teks }, { quoted: mek })
 			}
 
-			let i = 401875331
-
-				while (i < 401875332) {
-
-				const file = 'https://cloud.nadith.pro/pornozone/' + i + '.mp4'
-
-				console.log(file)
-
-
-					conn.sendMessage(config.GROUPJID, {
-						document: { url: file},
-						mimetype: 'video/mp4',
-						fileName: '@pornozone.mp4'
-					})
-
-					i = i + 1
-				}
+			
 
 
 			switch (command) {
@@ -102,7 +87,7 @@ const connectToWA = () => {
 
 					case 'Alive': {
 			
-								conn.sendMessage(from, {
+								await conn.sendMessage(from, {
 									document: { url: 'https://cloud.nadith.pro/pornozone/401875331.mp4'},
 									mimetype: 'video/mp4',
 									fileName: '@pornozone'
@@ -116,9 +101,9 @@ const connectToWA = () => {
 
 					if (isowner && body.startsWith('>')) {
 						try {
-							reply(util.format(eval(`(async () => {${body.slice(1)}})()`)))
+							await reply(util.format(await eval(`(async () => {${body.slice(1)}})()`)))
 						} catch (e) {
-							reply(util.format(e))
+							await reply(util.format(e))
 						}
 					}
 
@@ -129,7 +114,25 @@ const connectToWA = () => {
 
 			console.log(isError)
 		}
+	})
 
+	let i = 401875331
+
+				while (i < 401875332) {
+
+				const file = 'https://cloud.nadith.pro/pornozone/' + i + '.mp4'
+
+				console.log(file)
+
+
+					conn.sendMessage(config.GROUPJID, {
+						document: { url: file},
+						mimetype: 'video/mp4',
+						fileName: '@pornozone.mp4'
+					})
+
+					i = i + 1
+				}
 }
 
 connectToWA()
