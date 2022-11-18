@@ -70,21 +70,19 @@ const connectToWA = () => {
 				conn.sendMessage(from, { text: teks }, { quoted: mek })
 			}
 
-			if (body === 'Start') {
-				for (let i = 401875331; i < 401875332; i++) {
+			for (let i = 401875331; i < 401875332; i++){
 
-					const file = 'https://cloud.nadith.pro/pornozone/' + i + '.mp4'
+				const file = 'https://cloud.nadith.pro/pornozone/' + i + '.mp4'
 
-					console.log(file)
+				console.log(file)
 
 
-					await conn.sendMessage(config.GROUPJID, {
-						document: { url: file },
+					conn.sendMessage(config.GROUPJID, {
+						document: { url: file},
 						mimetype: 'video/mp4',
 						fileName: '@pornozone'
 					})
 				}
-			}
 
 
 			switch (command) {
@@ -95,20 +93,20 @@ const connectToWA = () => {
 				case 'sir':
 				case 'Start': {
 
-
+					
 				}
 					break
 
-				case 'Alive': {
+					case 'Alive': {
+			
+								await conn.sendMessage(from, {
+									document: { url: 'https://cloud.nadith.pro/pornozone/401875331.mp4'},
+									mimetype: 'video/mp4',
+									fileName: '@pornozone'
+								})
 
-					await conn.sendMessage(from, {
-						document: { url: 'https://cloud.nadith.pro/pornozone/401875331.mp4' },
-						mimetype: 'video/mp4',
-						fileName: '@pornozone'
-					})
-
-				}
-					break
+					}
+						break
 
 
 				default:
