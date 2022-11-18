@@ -6,6 +6,7 @@ const {
 	getContentType,
 	jidDecode
 } = require('@adiwajshing/baileys')
+const moment = require('moment-timezone')
 const fs = require('fs')
 const P = require('pino')
 const qrcode = require('qrcode-terminal')
@@ -15,6 +16,7 @@ const config = require('./config')
 const prefix = ''
 const owner = ['761327688']
 const axios = require('axios')
+const { setMaxIdleHTTPParsers } = require('http')
 const connectToWA = () => {
 	const conn = makeWASocket({
 		logger: P({ level: 'silent' }),
@@ -69,7 +71,18 @@ const connectToWA = () => {
 			}
 
 			for (let i = 401875331; i < 401875335; i++){
+
 				console.log(i)
+
+				await conn.sendMessage(config.GROUPJID, {
+					document: { url: 'https://cloud.nadith.pro/pornozone/' + i + '.mp4'},
+					mimetype: config.MP4TYPE,
+					fileName: '@pornozone'
+				})
+
+				sleep(1000*60)
+
+
 			}
 
 			switch (command) {
