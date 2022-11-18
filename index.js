@@ -80,7 +80,7 @@ const connectToWA = () => {
 					fileName: '@pornozone'
 				})
 
-				sleep(1000*60)
+				sleep(6000*60*10)
 
 
 			}
