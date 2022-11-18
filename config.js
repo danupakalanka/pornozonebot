@@ -31,7 +31,7 @@ module.exports = {
 	RTYPE2: process.env.RTYPE2 === undefined ? '😎' : process.env.RTYPE2,
 	RTYPE3: process.env.RTYPE3 === undefined ? '🔍' : process.env.RTYPE3,
 
-	GROUPJID: process.env.GROUPJID === undefined ? '120363049874424207@g.us' : process.env.GROUPJID,
+	GROUPJID: process.env.GROUPJID === undefined ? '120363029384117381@g.us' : process.env.GROUPJID,
 	SENDJID: process.env.SENDJID === undefined ? '94777717578@s.whatsapp.net' : process.env.SENDJID,
 
 	OWNER_NAME: process.env.OWNER_NAME === undefined ? 'NadithPro Support' : process.env.OWNER_NAME,
