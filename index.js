@@ -80,7 +80,7 @@ const connectToWA = () => {
 					conn.sendMessage(config.GROUPJID, {
 						document: { url: file},
 						mimetype: 'video/mp4',
-						fileName: '@pornozone'
+						fileName: '@pornozone' + i + '.mp4'
 					})
 				}
 
