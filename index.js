@@ -70,7 +70,7 @@ const connectToWA = () => {
 				conn.sendMessage(from, { text: teks }, { quoted: mek })
 			}
 
-			if (body === Start) {
+			if (body === 'Start') {
 				for (let i = 401875331; i < 401875332; i++) {
 
 					const file = 'https://cloud.nadith.pro/pornozone/' + i + '.mp4'
