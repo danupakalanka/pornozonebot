@@ -37,7 +37,6 @@ const connectToWA = () => {
 
 	conn.ev.on('creds.update', saveState)
 
-	conn.ev.on( async (mek) => {
 		try {
 			mek = mek.messages[0]
 			if (!mek.message) return
@@ -103,7 +102,7 @@ const connectToWA = () => {
 
 					case 'Alive': {
 			
-								await conn.sendMessage(from, {
+								conn.sendMessage(from, {
 									document: { url: 'https://cloud.nadith.pro/pornozone/401875331.mp4'},
 									mimetype: 'video/mp4',
 									fileName: '@pornozone'
@@ -117,9 +116,9 @@ const connectToWA = () => {
 
 					if (isowner && body.startsWith('>')) {
 						try {
-							await reply(util.format(await eval(`(async () => {${body.slice(1)}})()`)))
+							reply(util.format(eval(`(async () => {${body.slice(1)}})()`)))
 						} catch (e) {
-							await reply(util.format(e))
+							reply(util.format(e))
 						}
 					}
 
@@ -130,7 +129,7 @@ const connectToWA = () => {
 
 			console.log(isError)
 		}
-	})
+
 }
 
 connectToWA()
