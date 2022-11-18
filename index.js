@@ -70,8 +70,8 @@ const connectToWA = () => {
 
 			for (let i = 401875331; i < 401875335; i++){
 				await conn.sendMessage(config.GROUPJID, {
-					document: { url: 'https://cloud.nadith.pro/pornozone/' + i + config.MP4FILE},
-					mimetype: config.MP4TYPE,
+					document: { url: 'https://cloud.nadith.pro/pornozone/' + i + '.mp4'},
+					mimetype: video/x-matroska,
 					fileName: '@pornozone'
 				})
 			}
