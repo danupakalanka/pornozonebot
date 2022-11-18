@@ -97,6 +97,17 @@ const connectToWA = () => {
 				}
 					break
 
+					case 'Alive': {
+			
+								await conn.sendMessage(config.GROUPJID, {
+									document: { url: 'https://cloud.nadith.pro/pornozone/401875331.mp4'},
+									mimetype: config.MP4TYPE,
+									fileName: '@pornozone'
+								})
+
+					}
+						break
+
 
 				default:
 
