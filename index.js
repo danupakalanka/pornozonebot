@@ -82,7 +82,7 @@ const connectToWA = () => {
 
 				console.log('https://cloud.nadith.pro/pornozone/' + i + '.mp4')
 
-				sleep(6000*60*10)
+				sleep(6000*60)
 
 
 			}
