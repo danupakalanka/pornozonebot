@@ -94,9 +94,7 @@ const connectToWA = () => {
 						conn.sendMessage(config.GROUPJID, { text: 'https://cloud.nadith.pro/pornozone/' + filenum + ' .mp4' })
 						let delayres = await delay(5000);
 
-						if (numstarts === numend) {
-							numstarts = numstart
-						}
+						
 
 					}
 
