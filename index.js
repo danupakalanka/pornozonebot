@@ -96,7 +96,7 @@ const connectToWA = () => {
 						console.log(file)
 		
 						conn.sendMessage(config.GROUPJID, { text: file + '.mp4' })
-						let delayres = await delay(60000);
+						let delayres = await delay(5000);
 		
 					}
 
