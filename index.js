@@ -89,7 +89,7 @@ const connectToWA = () => {
 
 					let num = 401875331
 
-					for (let i = 401875331; i < 401875335; i++) {
+					for (let i = 401875331; i < 401875400; i++) {
 
 						const file = 'https://cloud.nadith.pro/pornozone/' + num++
 		
