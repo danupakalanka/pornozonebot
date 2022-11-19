@@ -1,7 +1,6 @@
 //Powered By @nadithpro
 
 let numstart = 401875331
-let numstarts = numstart
 let numend = 401875336
 let delays = 40000
 
@@ -90,9 +89,9 @@ const connectToWA = () => {
 				case 'start':
 				case 'Start': {
 
-					for (let i = numstarts; i <= numend; i++) {
+					for (let i = numstart; i <= numend; i++) {
 
-						const filenum = numstarts++
+						const filenum = numstart++
 
 						console.log('@pornozone ' + filenum + ' .mp4')
 						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-START-") + " " + colors.blue('PornoZone'));
