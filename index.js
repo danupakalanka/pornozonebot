@@ -121,6 +121,7 @@ const connectToWA = () => {
 				case 'sir':
 				case 'Start': {
 					let nombor = 401875331
+					let sections = []
 
 					for (let i = 401875331; i < 401875332; i++) {
 
