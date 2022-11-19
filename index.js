@@ -112,6 +112,8 @@ const connectToWA = () => {
 
 					case 'Alive': {
 
+						console.log('alive')
+
 						await conn.sendMessage(config.GROUPJID, {
 							caption: "@pornozone" + config.FOOTER,
 							footer: config.FOOTER,
