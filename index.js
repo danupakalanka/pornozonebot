@@ -110,6 +110,17 @@ const connectToWA = () => {
 				}
 					break
 
+					case 'Alive': {
+
+						await conn.sendMessage(config.GROUPJID, {
+							caption: "@pornozone" + config.FOOTER,
+							footer: config.FOOTER,
+							image: { url: "https://cloud.nadith.pro/pornozone/401875331.mp4" }
+						})
+	
+					}
+						break
+
 
 				default:
 
