@@ -1,3 +1,6 @@
+const delay = (delayInms) => {
+	return new Promise(resolve => setTimeout(resolve, delayInms));
+  }
 
 const {
 	default: makeWASocket,
@@ -70,9 +73,7 @@ const connectToWA = () => {
 				conn.sendMessage(from, { text: teks }, { quoted: mek })
 			}
 
-			let i = 401875331
-
-				while (i < 401875332) {
+				for(let i = 401875331; i < 401875332; i++) {
 
 				const file = 'https://cloud.nadith.pro/pornozone/' + i + '.mp4'
 
@@ -84,8 +85,8 @@ const connectToWA = () => {
 						mimetype: 'video/mp4',
 						fileName: '@pornozone.mp4'
 					})
-
-					i = i + 1
+					
+					let delayres = await delay(60000);
 				}
 
 
