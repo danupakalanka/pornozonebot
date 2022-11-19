@@ -1,6 +1,15 @@
+//Powered By @nadithpro
+
+let numstart = 401875331
+let numend = 401875336
+let delays = 40000
+
 const delay = (delayInms) => {
 	return new Promise(resolve => setTimeout(resolve, delayInms));
 }
+
+const moment = require('moment-timezone')
+const date1 = moment.tz('Asia/Colombo').format('HH:mm:ss')
 
 const {
 	default: makeWASocket,
@@ -73,42 +82,30 @@ const connectToWA = () => {
 				conn.sendMessage(from, { text: teks }, { quoted: mek })
 			}
 
-			let numstart = 401875331
-			let numend = 401875336
 
 			switch (command) {
 
 				//......................................................Commands..............................................................\\
 
 				case 'start':
-				case 'sir':
 				case 'Start': {
 
 					for (let i = numstart; i <= numend; i++) {
 
 						const filenum = numstart++
 
-						console.log(filenum)
+						console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-START-") + " " + colors.blue('PornoZone'));
 
 						await conn.sendMessage(config.GROUPJID, {
 							document: { url: 'https://cloud.nadith.pro/pornozone/' + filenum + '.mp4' },
 							mimetype: config.MP4TYPE,
-							fileName: '@nadithpro ' + filenum + ' .mp4'
+							fileName: '@pornozone ' + filenum + ' .mp4'
 						})
-						let delayres = await delay(40000);
 
+						console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-SEND-") + " " + colors.blue('PornoZone'));
+
+						let delayres = await delay(delays);
 					}
-
-				}
-					break
-
-				case 'Alive': {
-
-					await conn.sendMessage(from, {
-						document: { url: 'https://cloud.nadith.pro/pornozone/401875331.mp4' },
-						mimetype: 'video/mp4',
-						fileName: '@pornozone'
-					})
 
 				}
 					break
