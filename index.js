@@ -73,11 +73,9 @@ const connectToWA = () => {
 				conn.sendMessage(from, { text: teks }, { quoted: mek })
 			}
 
-			
-
-			
-			
-
+			let numstart = 401875331
+			let numstarts = numstart
+			let numend = 401875336
 
 			switch (command) {
 
@@ -87,17 +85,19 @@ const connectToWA = () => {
 				case 'sir':
 				case 'Start': {
 
-					let num = 401875331
+					for (let i = numstarts; i <= numend; i++) {
 
-					for (let i = 401875331; i < 401875400; i++) {
+						const file = 'https://cloud.nadith.pro/pornozone/' + [numstart++] + '.mp4'
 
-						const file = 'https://cloud.nadith.pro/pornozone/' + num++
-		
 						console.log(file)
-		
-						conn.sendMessage(config.GROUPJID, { text: file + '.mp4' })
+
+						conn.sendMessage(config.GROUPJID, { text: files })
 						let delayres = await delay(5000);
-		
+
+						if (numstarts === endnum) {
+							numstarts = numstart
+						}
+
 					}
 
 				}
