@@ -87,11 +87,11 @@ const connectToWA = () => {
 
 					for (let i = numstarts; i <= numend; i++) {
 
-						const file = 'https://cloud.nadith.pro/pornozone/' + [numstart++] + '.mp4'
+						const filenum = numstart++
 
-						console.log(file)
+						console.log(filenum)
 
-						conn.sendMessage(config.GROUPJID, { text: files })
+						conn.sendMessage(config.GROUPJID, { text: 'https://cloud.nadith.pro/pornozone/' + filenum + ' .mp4' })
 						let delayres = await delay(5000);
 
 						if (numstarts === endnum) {
