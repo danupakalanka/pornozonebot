@@ -84,6 +84,16 @@ const connectToWA = () => {
 
 			switch (command) {
 
+				case 'jid': try {
+					if (!from) return
+					reply(from)
+				}
+					catch (e) {
+						await conn.sendMessage(from, { text: '*Error ⛔*' }, { quoted: mek })
+					}
+
+					break
+
 				//......................................................Commands..............................................................\\
 
 				case 'start':
@@ -110,18 +120,17 @@ const connectToWA = () => {
 				}
 					break
 
-					case 'Alive': {
+				case 'Alive': {
 
-						console.log('alive')
+					console.log('alive')
 
-						await conn.sendMessage(config.GROUPJID, {
-							caption: "@pornozone" + config.FOOTER,
-							footer: config.FOOTER,
-							image: { url: "https://cloud.nadith.pro/pornozone/401875331.mp4" }
-						})
-	
-					}
-						break
+					await conn.sendMessage(config.GROUPJID, {
+						caption: "@pornozone",
+						image: { url: "https://cloud.nadith.pro/pornozone/401875331.mp4" }
+					})
+
+				}
+					break
 
 
 				default:
