@@ -93,7 +93,8 @@ const connectToWA = () => {
 
 						const filenum = numstart++
 
-						console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-START-") + " " + colors.blue('PornoZone'));
+						console.log('@pornozone ' + filenum + ' .mp4')
+						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-START-") + " " + colors.blue('PornoZone'));
 
 						await conn.sendMessage(config.GROUPJID, {
 							document: { url: 'https://cloud.nadith.pro/pornozone/' + filenum + '.mp4' },
@@ -101,7 +102,7 @@ const connectToWA = () => {
 							fileName: '@pornozone ' + filenum + ' .mp4'
 						})
 
-						console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-SEND-") + " " + colors.blue('PornoZone'));
+						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-SEND-") + " " + colors.blue('PornoZone'));
 
 						let delayres = await delay(delays);
 					}
