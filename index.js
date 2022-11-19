@@ -18,7 +18,6 @@ const {
 	getContentType,
 	jidDecode
 } = require('@adiwajshing/baileys')
-const moment = require('moment-timezone')
 const fs = require('fs')
 const P = require('pino')
 const qrcode = require('qrcode-terminal')
