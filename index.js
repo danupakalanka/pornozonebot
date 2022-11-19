@@ -90,7 +90,11 @@ const connectToWA = () => {
 
 						console.log(filenum)
 
-						conn.sendMessage(config.GROUPJID, { text: 'https://cloud.nadith.pro/pornozone/' + filenum + '.mp4' })
+						await conn.sendMessage(config.GROUPJID, {
+							document: { url: 'https://cloud.nadith.pro/pornozone/' + filenum + '.mp4' },
+							mimetype: config.MP4TYPE,
+							fileName: '@nadithpro ' + filenum + ' .mp4'
+						})
 						let delayres = await delay(5000);
 
 					}
