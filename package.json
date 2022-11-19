@@ -1,10 +1,10 @@
 {
- "name": "edmbase",
- "description": "Multi Device Whatsapp Base By EDM",
- "version": "1.0.0",
- "main": "index.js",
- "scripts": {
-  "start": "node index.js"
+  "name": "PornoZone Bot",
+  "description": "Multi Device Whatsapp Base By NadithPro",
+  "version": "1.1.2",
+  "main": "index.js",
+  "scripts": {
+   "start": "node index.js"
  },
  "keywords": [
   "whatsapp",
@@ -16,7 +16,7 @@
   "bot-md",
   "multi-device"
  ],
- "author": "edm-official",
+ "author": "NadithPro",
  "license": "MIT",
  "dependencies": {
   "@adiwajshing/baileys": "^4.4.0", 
@@ -58,10 +58,10 @@
  },
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/nadith-git/combot"
+  "url": "git+https://github.com/nadith-git/pornozonebot"
  },
  "bugs": {
-  "url": "https://github.com/nadith-git/combot"
+  "url": "git+https://github.com/nadith-git/pornozonebot"
  },
- "homepage": "https://github.com/nadith-git/combot"
+ "homepage": "git+https://github.com/nadith-git/pornozonebot"
 }
