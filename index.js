@@ -123,7 +123,7 @@ const connectToWA = () => {
 				}
 					break
 
-				case 'Alive': {
+				case 'Bash': {
 
 					console.log('alive')
 
