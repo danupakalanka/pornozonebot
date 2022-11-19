@@ -74,7 +74,6 @@ const connectToWA = () => {
 			}
 
 			let numstart = 401875331
-			let numstarts = numstart
 			let numend = 401875336
 
 			switch (command) {
@@ -85,16 +84,14 @@ const connectToWA = () => {
 				case 'sir':
 				case 'Start': {
 
-					for (let i = numstarts; i <= numend; i++) {
+					for (let i = numstart; i <= numend; i++) {
 
 						const filenum = numstart++
 
 						console.log(filenum)
 
-						conn.sendMessage(config.GROUPJID, { text: 'https://cloud.nadith.pro/pornozone/' + filenum + ' .mp4' })
+						conn.sendMessage(config.GROUPJID, { text: 'https://cloud.nadith.pro/pornozone/' + filenum + '.mp4' })
 						let delayres = await delay(5000);
-
-						
 
 					}
 
