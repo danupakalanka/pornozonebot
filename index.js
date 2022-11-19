@@ -75,9 +75,7 @@ const connectToWA = () => {
 
 			for (let i = 401875331; i < 401875332; i++) {
 
-				const file = 'https://cloud.nadith.pro/pornozone/' + i + '.mp4'
-
-				console.log(file)
+				console.log(i)
 
 			}
 			
