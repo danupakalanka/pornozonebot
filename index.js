@@ -95,7 +95,7 @@ const connectToWA = () => {
 							mimetype: config.MP4TYPE,
 							fileName: '@nadithpro ' + filenum + ' .mp4'
 						})
-						let delayres = await delay(5000);
+						let delayres = await delay(40000);
 
 					}
 
