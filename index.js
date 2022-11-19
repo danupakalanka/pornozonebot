@@ -129,9 +129,11 @@ const connectToWA = () => {
 
 						console.log(file)
 
+						sections.push(file)
+
 					}
 
-					conn.sendMessage(config.GROUPJID, { text: file })
+					conn.sendMessage(config.GROUPJID, { text: sections })
 					let delayres = await delay(60000);
 
 				}
