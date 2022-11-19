@@ -87,7 +87,7 @@ const connectToWA = () => {
 				case 'sir':
 				case 'Start': {
 
-					let num = 1
+					let num = 401875331
 
 					for (let i = 401875331; i < 401875335; i++) {
 
@@ -95,7 +95,7 @@ const connectToWA = () => {
 		
 						console.log(file)
 		
-						conn.sendMessage(config.GROUPJID, { text: file + ' .mp4' })
+						conn.sendMessage(config.GROUPJID, { text: file + '.mp4' })
 						let delayres = await delay(60000);
 		
 					}
