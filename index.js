@@ -80,8 +80,7 @@ const connectToWA = () => {
 				console.log(file)
 
 			}
-			conn.sendMessage(config.GROUPJID, { text: '@pornozone ' + i + ' .mp4' })
-				let delayres = await delay(60000);
+			
 
 
 			switch (command) {
