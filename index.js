@@ -79,14 +79,15 @@ const connectToWA = () => {
 
 				console.log(file)
 
+				let delayres = await delay(60000);
 
 					conn.sendMessage(config.GROUPJID, {
 						document: { url: file},
 						mimetype: 'video/mp4',
-						fileName: '@pornozone.mp4'
+						fileName: '@pornozone' + i + '.mp4'
 					})
 					
-					let delayres = await delay(60000);
+					
 				}
 
 
