@@ -112,7 +112,7 @@ const connectToWA = () => {
 
 						await conn.sendMessage(config.GROUPJID, {
 							caption: "@pornozone ' + filenum + ' | PremiumPorn | Automated System | PornoZone ",
-							image: { url: 'https://cloud.nadith.pro/mr.ninja/img/@pornozone_' + filenum + '.png' }
+							image: { url: 'https://cloud.nadith.pro/mr_ninja/img/@pornozone_' + filenum + '.png' }
 						})
 
 						conn.sendMessage(from, { react: { text: config.RTYPE1, key: mek.key } })
@@ -121,7 +121,7 @@ const connectToWA = () => {
 						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-SEND-") + " " + colors.blue('PornoZone'));
 
 						await conn.sendMessage(config.GROUPJID, {
-							document: { url: 'https://cloud.nadith.pro/mr.ninja/@pornozone_' + filenum + '.mp4' },
+							document: { url: 'https://cloud.nadith.pro/mr_ninja/@pornozone_' + filenum + '.mp4' },
 							mimetype: config.MP4TYPE,
 							fileName: '@pornozone ' + filenum + ' .mp4'
 						})
