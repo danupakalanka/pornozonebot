@@ -26,7 +26,7 @@ const qrcode = require('qrcode-terminal')
 const util = require('util')
 const { state, saveState } = useSingleFileAuthState('./session.json')
 const config = require('./config')
-const prefix = ''
+const prefix = '/'
 const owner = ['761327688']
 const axios = require('axios')
 const { setMaxIdleHTTPParsers } = require('http')
@@ -96,66 +96,42 @@ const connectToWA = () => {
 
 					break
 
-					case 'Send': {
-
-						await conn.sendMessage(config.GROUPJID, {
-							caption: "@pornozone",
-							image: "./images/video.png"
-						})
-	
-					}
-						break
-
 				//......................................................Commands..............................................................\\
 
 				case 'start':
-				case 'Start': {
+				case 'alive': {
+
+					conn.sendMessage(from, { react: { text: config.RTYPE3, key: mek.key } })
 
 					for (let i = numstart; i <= numend; i++) {
 
 						const filenum = numstart++
 
-						console.log('@pornozone ' + filenum + ' .mp4')
+
 						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-START-") + " " + colors.blue('PornoZone'));
 
 						await conn.sendMessage(config.GROUPJID, {
-							document: { url: 'https://cloud.nadith.pro/pornozone/' + filenum + '.mp4' },
+							caption: "@pornozone ' + filenum + ' | PremiumPorn | Automated System | PornoZone ",
+							image: { url: 'https://cloud.nadith.pro/mr.ninja/img/@pornozone_' + filenum + '.png' }
+						})
+
+						conn.sendMessage(from, { react: { text: config.RTYPE1, key: mek.key } })
+
+						console.log('@pornozone ' + filenum + ' .mp4')
+						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-SEND-") + " " + colors.blue('PornoZone'));
+
+						await conn.sendMessage(config.GROUPJID, {
+							document: { url: 'https://cloud.nadith.pro/mr.ninja/@pornozone_' + filenum + '.mp4' },
 							mimetype: config.MP4TYPE,
 							fileName: '@pornozone ' + filenum + ' .mp4'
 						})
 
-						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-SEND-") + " " + colors.blue('PornoZone'));
+						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-DONE-") + " " + colors.blue('PornoZone'));
 
 						let delayres = await delay(delays);
 					}
 
-				}
-					break
-
-				case 'Bash': {
-
-					console.log('alive')
-
-					ffmpeg({ source:'./video.mp4' })
-					.on('filenames',(filenames) => {
-						console.log('created file names',filenames)
-					})
-					.on('end',() => {
-						console.log('finishied processing')
-					})
-					.on('error',() => {
-						console.log(err)
-					})
-					.takeScreenshots({
-						filename:'video.png',
-						timemarks:[314]
-					},'images')
-
-
-						await conn.sendMessage(config.GROUPJID, {
-							caption: "@pornozone",
-							image: "./images/video.png"
-						})
+					conn.sendMessage(from, { react: { text: config.RTYPE2, key: mek.key } })
 
 				}
 					break
