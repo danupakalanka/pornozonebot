@@ -113,7 +113,7 @@ const connectToWA = () => {
 
 					await conn.sendMessage(config.GROUPJID, {
 						caption: "@pornozone",
-						image: fs.readFileSync("./images/video.png")
+						image: fs.readFileSync("images/video.png")
 					})
 
 				}
