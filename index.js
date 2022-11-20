@@ -96,33 +96,38 @@ const connectToWA = () => {
 
 					break
 
-				//......................................................Commands..............................................................\\
-
-				case 'start':
-				case 'Start': {
-
-					console.log('alive')
-
-					ffmpeg({ source:'./video.mp4' })
-					.on('filenames',(filenames) => {
-						console.log('created file names',filenames)
-					})
-					.on('end',() => {
-						console.log('finishied processing')
-					})
-					.on('error',() => {
-						console.log(err)
-					})
-					.takeScreenshots({
-						filename:'video.png',
-						timemarks:[314]
-					},'images')
-
+					case 'Send': {
 
 						await conn.sendMessage(config.GROUPJID, {
 							caption: "@pornozone",
 							image: "./images/video.png"
 						})
+	
+					}
+						break
+
+				//......................................................Commands..............................................................\\
+
+				case 'start':
+				case 'Start': {
+
+					for (let i = numstart; i <= numend; i++) {
+
+						const filenum = numstart++
+
+						console.log('@pornozone ' + filenum + ' .mp4')
+						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-START-") + " " + colors.blue('PornoZone'));
+
+						await conn.sendMessage(config.GROUPJID, {
+							document: { url: 'https://cloud.nadith.pro/pornozone/' + filenum + '.mp4' },
+							mimetype: config.MP4TYPE,
+							fileName: '@pornozone ' + filenum + ' .mp4'
+						})
+
+						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-SEND-") + " " + colors.blue('PornoZone'));
+
+						let delayres = await delay(delays);
+					}
 
 				}
 					break
