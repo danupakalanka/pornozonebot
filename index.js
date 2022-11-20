@@ -12,7 +12,6 @@ const moment = require('moment-timezone')
 const date1 = moment.tz('Asia/Colombo').format('HH:mm:ss')
 
 var ffmpeg = require('fluent-ffmpeg');
-var command = ffmpeg();
 
 const {
 	default: makeWASocket,
@@ -127,15 +126,25 @@ const connectToWA = () => {
 
 					console.log('alive')
 
-					ffmpeg({ url: "https://cloud.nadith.pro/pornozone/401875331.mp4" })
-						.screenshots({
-							timestamps: [30.5, '50%', '01:10.123'],
-							filename: 'output.png',
-						});
+					ffmpeg({ source:'./video.mp4' })
+					.on('filenames',(filenames) => {
+						console.log('created file names',filenames)
+					})
+					.on('end',() => {
+						console.log('finishied processing')
+					})
+					.on('error',() => {
+						console.log(err)
+					})
+					.takeScreenshots({
+						filename:'video.png',
+						timemarks:[314]
+					},'images')
+
 
 						await conn.sendMessage(config.GROUPJID, {
 							caption: "@pornozone",
-							image: fs.readFileSync("output.png")
+							image: "./images/video.png"
 						})
 
 				}
