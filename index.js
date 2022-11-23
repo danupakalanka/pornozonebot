@@ -1,7 +1,7 @@
 //Powered By @nadithpro
 
-let numstart = 401875331
-let numend = 401875336
+let numstart = 402147483640
+let numend = 402147485719
 let delays = 40000
 
 const delay = (delayInms) => {
@@ -115,8 +115,8 @@ const connectToWA = () => {
 						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-START-") + " " + colors.blue('PornoZone'));
 
 						await conn.sendMessage(config.GROUPJID, {
-							caption: "@pornozone ' + filenum + ' | PremiumPorn | Automated System | PornoZone ",
-							image: { url: 'https://cloud.nadith.pro/mr_ninja/img/@pornozone_' + filenum + '.png' }
+							caption: filenum + "@pornozone | PremiumPorn | Automated System | PornoZone ",
+							image: { url: 'https://cloud.nadith.pro/mr_ninja/img/' + filenum + '_@pornozone.jpg' }
 						})
 
 						conn.sendMessage(from, { react: { text: config.RTYPE1, key: mek.key } })
@@ -125,7 +125,7 @@ const connectToWA = () => {
 						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-SEND-") + " " + colors.blue('PornoZone'));
 
 						await conn.sendMessage(config.GROUPJID, {
-							document: { url: 'https://cloud.nadith.pro/mr_ninja/@pornozone_' + filenum + '.mp4' },
+							document: { url: 'https://cloud.nadith.pro/mr_ninja/' + filenum + '_@pornozone.mp4' },
 							mimetype: config.MP4TYPE,
 							fileName: '@pornozone ' + filenum + ' .mp4'
 						})
