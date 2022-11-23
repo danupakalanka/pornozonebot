@@ -83,6 +83,8 @@ const connectToWA = () => {
 				conn.sendMessage(from, { text: teks }, { quoted: mek })
 			}
 
+			const isSUB = from == config.SENDJID ? true : false
+
 
 			switch (command) {
 
@@ -100,6 +102,8 @@ const connectToWA = () => {
 
 				case 'start':
 				case 'alive': {
+
+					if (!isSUB) return
 
 					conn.sendMessage(from, { react: { text: config.RTYPE3, key: mek.key } })
 
