@@ -2,7 +2,7 @@
 
 let numstart = 402147483640
 let numend = 402147485719
-let delays = 40000
+let delays = 900000
 
 const delay = (delayInms) => {
 	return new Promise(resolve => setTimeout(resolve, delayInms));
