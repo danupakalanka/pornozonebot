@@ -1,6 +1,6 @@
 //Powered By @nadithpro
 
-let numstart = 402147483965
+let numstart = 402147484144
 let numend = 402147485719
 let delays = 900000
 
