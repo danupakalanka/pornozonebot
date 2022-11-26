@@ -132,7 +132,7 @@ const connectToWA = () => {
 
 						//console.log(colors.brightCyan(date1,) + " " + colors.black.bgYellow('@pornozone ' + filenum + ' .mp4') + " " + colors.green("-DONE-") + " " + colors.blue('PornoZone'));
 
-						let delayres = await delay(delays);
+						//let delayres = await delay(delays);
 					}
 
 					conn.sendMessage(from, { react: { text: config.RTYPE2, key: mek.key } })
